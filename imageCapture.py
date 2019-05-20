@@ -16,12 +16,9 @@ def capture_cmd():
     return triggerAndDownloadWithName
 
 
-# , folder-name
-save_location = "/home/pi/Pictures/demogphoto"  # + folder-name
-
-
 def createSaveFolder(save_location):
     try:
+        os.chdir("/home/pi/Pictures")
         print("Creating folder to save images: ", save_location)
         os.makedirs(save_location)
         os.chdir(save_location)
